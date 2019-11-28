@@ -30,11 +30,19 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    'quill/dist/quill.snow.css',
+    'quill/dist/quill.bubble.css',
+    'quill/dist/quill.core.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/filters', '~/plugins/axios'],
+  plugins: [
+    '~/plugins/filters',
+    '~/plugins/axios',
+    { src: '~plugins/nuxt-quill-plugin.js', ssr: false },
+  ],
   /*
    ** Nuxt.js dev-modules
    */
